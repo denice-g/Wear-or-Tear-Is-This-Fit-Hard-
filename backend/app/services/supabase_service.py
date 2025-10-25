@@ -1,6 +1,6 @@
 from supabase import create_client
-from io import BytesIO
 import os
+import uuid
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,15 +19,15 @@ def upload_image(file):
     content = file.file.read()
     path = f"outfits/{file.filename}"
 
-    supabase.storage.from_("outfit-images").upload(path, BytesIO(content))
-    image_url = f"{SUPABASE_URL}/storage/v1/object/public/outfit-images/{path}"
-    return f"{SUPABASE_URL}/storage/v1/object/public/outfit-images/{path}"
+    supabase.storage.from_("outift-images").upload(path, content)
+    image_url = f"{SUPABASE_URL}/storage/v1/object/public/outift-images/{path}"
+    return f"{SUPABASE_URL}/storage/v1/object/public/outift-images/{path}"
 
 def save_outfit_to_db(user_id, image_url, occasion, weather, feedback):
     supabase.table("outfits").insert({
-        "user_id": user_id,
+        #"user_id": user_id,
         "image_url": image_url,
         "occasion": occasion,
         "weather": weather,
         "ai_feedback": feedback
-    }).excute()
+    }).execute()
