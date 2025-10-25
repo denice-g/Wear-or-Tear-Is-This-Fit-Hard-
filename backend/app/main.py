@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import outfit
+from app.routes import users
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
 app = FastAPI()
 
 app.add_middleware(
@@ -13,3 +16,4 @@ app.add_middleware(
 
 # Include all routers from the routes folder
 app.include_router(outfit.router)
+app.include_router(users.router)
