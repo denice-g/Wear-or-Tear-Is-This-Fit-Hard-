@@ -6,8 +6,8 @@ import os
 
 load_dotenv()
 
-DATABASE_URL = os.environ.get("DATABASE_URL")  # Store in .env for safety
-DATABASE_KEY = os.environ.get("DATABASE_KEY")
+DATABASE_URL = os.environ.get("SUPABASE_URL")  # Store in .env for safety
+DATABASE_KEY = os.environ.get("SUPABASE_KEY")
 
 supabase: Client = create_client(DATABASE_URL, DATABASE_KEY)
 
