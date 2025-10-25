@@ -6,11 +6,12 @@ from app.routes import weather_endpoint
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
-app = FastAPI()
+app = FastAPI(title="Wear or Tear API")
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # adjust for your frontend
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -19,3 +20,7 @@ app.add_middleware(
 app.include_router(outfit.router)
 app.include_router(users.router)
 app.include_router(weather_endpoint.router)
+
+@app.get("/")
+def root():
+    return {"message": "Wear or Tear backend is running"}
