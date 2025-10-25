@@ -1,13 +1,12 @@
 import React from "react";
-import Camera from "./components/camera"; 
+//import Login from "src/pages/Login.jsx";
 
 function App() {
-  return (
-    <div>
-      <h1>Camera App</h1>
-      <Camera />
+  /*return (
+    <div>  
+      <Login />
     </div>
-  );
+  );*/
 }
 
 export default App;
