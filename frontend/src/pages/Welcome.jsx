@@ -3,8 +3,19 @@ import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox.jsx";
 import WhiteBox from "../components/white_box.jsx";
 import EverythingBox from "../components/EverythingBox.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Welcome() {
+  const navigate = useNavigate();
+
+  const handleClickLogin = () => {
+    navigate('/login')
+  };
+
+  const handleClickSignup = () => {
+    navigate('/signup')
+  };
+
   return (
     <div
       style={{
@@ -46,8 +57,8 @@ function Welcome() {
 
 
           <div style={{ display: "flex", flexDirection: "column", gap: 20, alignItems: "center", width: "250px" }}>
-            <EverythingBox label="Login" onClick={() => console.log("Login clicked")} />
-            <EverythingBox label="Sign Up" onClick={() => console.log("Sign Up clicked")} />
+            <EverythingBox label="Login" onClick={handleClickLogin} />
+            <EverythingBox label="Sign Up" onClick={handleClickSignup} />
           </div>
         </div>
       </BlueBox>
