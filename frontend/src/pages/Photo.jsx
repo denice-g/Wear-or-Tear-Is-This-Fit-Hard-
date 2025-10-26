@@ -26,8 +26,8 @@ function Photo() {
        <Camera style={{width: "90%", height:"90%"}}/>
        </div>
        <div style={{ width: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexDirection:"column",padding: "0 8px", maxWidth: "200px" }}>
-         <h3 className="login-subtitle">Take a pic or upload one! </h3>
-         <h3 className="login-subtitle">Make sure your entire fit is in frame.</h3>
+         <h3 className="login-subtitle"style={{ fontFamily: "'Pixelify Sans', sans-serif" }}>Take a pic or upload one! </h3>
+         <h3 className="login-subtitle" style={{ fontFamily: "'Pixelify Sans', sans-serif" }}>Make sure your entire fit is in frame.</h3>
          <div
     style={{
             display: "flex",
