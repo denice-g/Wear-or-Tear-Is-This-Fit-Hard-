@@ -1,11 +1,13 @@
 import React from "react";
 import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox";
+import { useNavigate } from "react-router-dom"
 import "../styles/Login.css"; 
 import InputBox from "../components/InputBox.jsx";
 import EverythingBox from "../components/EverythingBox.jsx";
 import Left from "../components/Left.jsx";
 function UserData() {
+    const navigate = useNavigate();
   return (
     <div
       style={{
@@ -38,11 +40,11 @@ function UserData() {
             }}
             >
             <div style={{ marginRight: "150px" }}> 
-                <Left />
+                <Left to="/Login" />
             </div>
             <EverythingBox
                 label="Sign"
-                onClick={() => console.log("Login clicked")} 
+                onClick={() =>navigate("/WhatDo") } 
             />
             </div>
     </div>

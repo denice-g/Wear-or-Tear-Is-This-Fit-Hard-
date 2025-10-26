@@ -1,11 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Larrow from "../assets/Larrow.png";
 
 
-function Left(){ 
+function Left({to = -1 }){ 
+    const navigate = useNavigate();
   return (
       <button 
-      onClick={()=>{}}
+      onClick={()=>navigate(to)}
       style={{
             width: "45px",
             height:"45px",

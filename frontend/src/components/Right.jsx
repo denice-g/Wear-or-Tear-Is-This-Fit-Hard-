@@ -1,11 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Rarrow from "../assets/Rarrow.png";
 
 
-function Right(){ 
+function Right({to}){ 
+  const navigate = useNavigate();
   return (
       <button 
-      onClick={()=>{}}
+      onClick={()=>navigate(to)}
       style={{
             width: "45px",
             height:"45px",

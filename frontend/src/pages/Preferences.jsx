@@ -4,12 +4,14 @@ import BlueBox from "../components/big_bluebox";
 import WhiteBox from "../components/white_box";
 import Left from "../components/Left.jsx";
 import Right from "../components/Right.jsx";
+import { useNavigate } from "react-router-dom"
 
 function Preferences() {
   const [fit, setFit] = useState("");
   const [color, setColor] = useState("");
   const [style, setStyle] = useState("");
   const [zip, setZip] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -171,9 +173,9 @@ function Preferences() {
               padding: "10px 15px",
             }}
           >
-            <Left />
+            <Left to="/Photo" />
             <div style={{ marginLeft: "auto" }}>
-              <Right />
+              <Right to="/Results"/>
             </div>
           </div>
                   </div>

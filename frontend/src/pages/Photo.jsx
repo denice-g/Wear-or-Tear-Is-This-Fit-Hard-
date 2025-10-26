@@ -54,7 +54,7 @@ function Photo() {
               padding: "10px 15px",
             }}
           >
-            <Left />
+            <Left to="/WhatDo" />
             
             <div
                 style={{
@@ -65,7 +65,7 @@ function Photo() {
                     padding: "10px 15px",   
                 }}
                 >
-                <Right />  
+                <Right to="/preferences" />  
             </div>
 
           </div>

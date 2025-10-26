@@ -4,10 +4,8 @@ import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox";
 import "../styles/Login.css"; 
 import InputBox from "../components/InputBox.jsx";
-<<<<<<< HEAD
+
 import Left from "../components/Left.jsx";
-=======
->>>>>>> 2d619bcd0ed706e5571100cf2e0e7ab8469fb0a7
 import EverythingBox from "../components/EverythingBox.jsx";
 
 function Login() {
@@ -103,14 +101,11 @@ function Login() {
             }}
           >
             <EverythingBox
-<<<<<<< HEAD
-              label="LOGIN"
-              onClick={() => console.log("Login clicked")}
-=======
+
               label="Login"
               onClick={handleLogin}
               disabled={loading}
->>>>>>> 2d619bcd0ed706e5571100cf2e0e7ab8469fb0a7
+
             />
           </div>
         <div
@@ -138,7 +133,7 @@ function Login() {
         marginBottom: "-50px", 
       }}
     >
-      <Left />
+      <Left to="/Welcome" />
     </div>
 
     </BlueBox>
