@@ -20,7 +20,6 @@ const Camera = ({ style }) => {
         alignItems: "center",
         justifyContent: "center",
         ...style,
-
       }}
     >
       {!im ? (
@@ -39,26 +38,39 @@ const Camera = ({ style }) => {
 
       <div style={{ marginTop: "6px" }} />
       {!im ? (
-        <button onClick={capture}style={{
-          padding: "10px 15px",
-          fontSize: " 15px",
-          borderRadius:"12px",
-          cursor: "pointer",
-          backgroundColor:"#95CEED ",
-          border: "2px solid #8abbd8", 
-          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-          color:"#070707ff"}}>Take a Pic</button>
+        <button
+          onClick={capture}
+          style={{
+            padding: "10px 15px",
+            fontSize: "15px",
+            borderRadius: "12px",
+            cursor: "pointer",
+            backgroundColor: "#95CEED",
+            border: "2px solid #8abbd8",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+            color: "#070707ff",
+            fontFamily: "'Pixelify Sans', sans-serif", 
+          }}
+        >
+          Take a Pic
+        </button>
       ) : (
-        <button onClick={() => setImage(null)} 
-        style={{
-          padding: "10px 15px",
-          fontSize: " 15px",
-          borderRadius:"12px",
-          cursor: "pointer",
-          backgroundColor:"#95CEED ",
-          border: "2px solid #8abbd8",
-          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", 
-          color:"#070707ff"}}>Retake</button>
+        <button
+          onClick={() => setImage(null)}
+          style={{
+            padding: "10px 15px",
+            fontSize: "15px",
+            borderRadius: "12px",
+            cursor: "pointer",
+            backgroundColor: "#95CEED",
+            border: "2px solid #8abbd8",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+            color: "#070707ff",
+            fontFamily: "'Pixelify Sans', sans-serif",
+          }}
+        >
+          Retake
+        </button>
       )}
     </div>
   );

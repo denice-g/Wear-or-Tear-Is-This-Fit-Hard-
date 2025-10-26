@@ -3,7 +3,7 @@ import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox";
 import "../styles/Login.css"; 
 import InputBox from "../components/InputBox.jsx";
-
+import Left from "../components/Left.jsx";
 import EverythingBox from "../components/EverythingBox.jsx";
 function Login() {
   return (
@@ -34,7 +34,7 @@ function Login() {
             }}
           >
             <EverythingBox
-              label="Login"
+              label="LOGIN"
               onClick={() => console.log("Login clicked")}
             />
           </div>
@@ -46,13 +46,28 @@ function Login() {
             }}
           >
             <EverythingBox
-              label="Sign"
+              label="SIGN IN"
               onClick={() => console.log("Login clicked")}
             />
-          </div>
+        </div>
     </div>
-        
+   
+
+    <div
+      style={{
+        width: "80%",
+        display: "flex",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        padding: "10px 15px",
+        marginBottom: "-50px", 
+      }}
+    >
+      <Left />
+    </div>
+
     </BlueBox>
+        
     </div>
   );
 }

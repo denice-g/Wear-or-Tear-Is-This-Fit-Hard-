@@ -6,6 +6,8 @@ import InputBox from "../components/InputBox.jsx";
 import Camera from "../components/camera.jsx";
 import CameraBox from "../components/CameraBox.jsx";
 import DownloadBox from "../components/DownloadBox.jsx";
+import Left from "../components/Left.jsx";
+import Right from "../components/Right.jsx";
 function Photo() {
   return (
     <div
@@ -17,7 +19,7 @@ function Photo() {
         justifyContent: "center",
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",
-        gap: "28px",
+        gap: "15px",
       }}
     >
       <BlueBox width="500px" height="500px">
@@ -26,7 +28,8 @@ function Photo() {
        <Camera style={{width: "90%", height:"90%"}}/>
        </div>
        <div style={{ width: "50%", display: "flex", alignItems: "center", justifyContent: "center", flexDirection:"column",padding: "0 8px", maxWidth: "200px" }}>
-         <h3 className="login-subtitle"style={{ fontFamily: "'Pixelify Sans', sans-serif" }}>Take a pic or upload one! </h3>
+         <h3 className="login-subtitle"style={{ fontFamily: "'Pixelify Sans', sans-serif" }}> TAKE A PIC   or</h3>
+         <h3 className="login-subtitle"style={{ fontFamily: "'Pixelify Sans', sans-serif" }}>UPLOAD ONE!</h3>
          <h3 className="login-subtitle" style={{ fontFamily: "'Pixelify Sans', sans-serif" }}>Make sure your entire fit is in frame.</h3>
          <div
     style={{
@@ -39,10 +42,35 @@ function Photo() {
             >
          <CameraBox />
          <DownloadBox/>
-    </div>
-    </div>
-    </div>
+        </div>
+        </div>
+        </div>
+        <div
+            style={{
+              width: "90%",
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              padding: "10px 15px",
+            }}
+          >
+            <Left />
+            
+            <div
+                style={{
+                    width: "90%",
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    alignItems: "right",
+                    padding: "10px 15px",   
+                }}
+                >
+                <Right />  
+            </div>
+
+          </div>
         </BlueBox>
+       
     </div>
   );
 }
