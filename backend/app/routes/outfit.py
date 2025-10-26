@@ -27,7 +27,7 @@ async def outfit_advice(
     weather = await get_weather(location.latitude, location.longitude)
 
     ai_results = await analyze_outfit(image_url, occasion, weather, demo_user_id)
-
+    
     save_outfit_to_db(demo_user_id, image_url, occasion, weather, ai_results["feedback"])
 
     return {

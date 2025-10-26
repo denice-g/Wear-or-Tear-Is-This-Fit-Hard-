@@ -15,7 +15,12 @@ async def analyze_outfit(image_url: str, occasion: str, weather: dict, user_id: 
     response = openai.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": "You are a helpful fashion stylist"},
+            {"role": "system", "content":[
+                "You are a helpful fashion stylist"
+                "You must respond **only** in valid JSON with two keys: "
+                "'score' (a number from 0 to 100) and 'feedback' (a short paragraph)."
+            ]
+            },
             {"role": "user", "content": [
                 {"type": "text", "text": f"Analyze this outfit for a {occasion} in {weather} weather. Give important suggestions."},
                 {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{img_base64}"}}
