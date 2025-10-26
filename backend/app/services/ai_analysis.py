@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-async def analyze_outfit(image_url: str, occasion: str, weather: str, user_id: str):
+async def analyze_outfit(image_url: str, occasion: str, weather: dict, user_id: str):
 
     import requests
     img_bytes = requests.get(image_url).content
