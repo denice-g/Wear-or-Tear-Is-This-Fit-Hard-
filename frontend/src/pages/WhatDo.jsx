@@ -3,8 +3,9 @@ import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox.jsx";
 import WhiteBox from "../components/white_box.jsx";
 import EverythingBox from "../components/EverythingBox.jsx";
-
+import { useNavigate } from "react-router-dom"
 function WhatDo() {
+    const navigate = useNavigate();
   return (
     <div
       style={{
@@ -39,8 +40,8 @@ function WhatDo() {
                 What would you like to do?
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 20, alignItems: "center", width: "250px" }}>
-            <EverythingBox label="DRIP CALCULATOR" onClick={() => console.log("Login clicked")} />
-            <EverythingBox label="FIT DIARY" onClick={() => console.log("Sign Up clicked")} />
+            <EverythingBox label="DRIP CALCULATOR" onClick={() => navigate("/Photo") } />
+            <EverythingBox label="FIT DIARY" onClick={() => navigate("/Preferences")} />
           </div>
             </div>
         </WhiteBox>
