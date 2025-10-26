@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Webcam from "react-webcam";
 
-const Camera = () => {
+const Camera = ({ style }) => {
   const photo = useRef(null);
   const [im, setImage] = useState(null);
 
@@ -11,28 +11,54 @@ const Camera = () => {
   };
 
   return (
-    <div className="container">
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        ...style,
+
+      }}
+    >
       {!im ? (
         <Webcam
           ref={photo}
-          height={1000}
-          width={600}
           screenshotFormat="image/png"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       ) : (
         <img
           src={im}
-          alt="Worked"
-          width={600}
-          height={600}
+          alt="Captured"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       )}
 
-      <div style={{ marginTop: "10px" }} />
+      <div style={{ marginTop: "6px" }} />
       {!im ? (
-        <button onClick={capture}>Take a Pic</button>
+        <button onClick={capture}style={{
+          padding: "10px 15px",
+          fontSize: " 15px",
+          borderRadius:"12px",
+          cursor: "pointer",
+          backgroundColor:"#95CEED ",
+          border: "2px solid #8abbd8", 
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+          color:"#070707ff"}}>Take a Pic</button>
       ) : (
-        <button onClick={() => setImage(null)}>You didn't slay. Retake</button>
+        <button onClick={() => setImage(null)} 
+        style={{
+          padding: "10px 15px",
+          fontSize: " 15px",
+          borderRadius:"12px",
+          cursor: "pointer",
+          backgroundColor:"#95CEED ",
+          border: "2px solid #8abbd8",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", 
+          color:"#070707ff"}}>Retake</button>
       )}
     </div>
   );

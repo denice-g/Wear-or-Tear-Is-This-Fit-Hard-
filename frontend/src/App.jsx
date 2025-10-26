@@ -1,10 +1,12 @@
 import React from "react";
-//import Login from "src/pages/Login.jsx";
+//import Login from "./pages/Login.jsx";
+//import Photo from "./pages/Photo.jsx";
 
 function App() {
   /*return (
-    <div>  
-      <Login />
+    <div>
+      {/*<Photo/>}
+      <Photo/>
     </div>
   );*/
 }
