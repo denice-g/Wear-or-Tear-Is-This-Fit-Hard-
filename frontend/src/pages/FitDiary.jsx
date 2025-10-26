@@ -60,7 +60,7 @@ function FitDiary({ firstName }) {
             >
               {/* Name's Fit Diary heading */}
               <h3 style={{ textAlign: "center", marginBottom: "15px", fontWeight: "normal", fontSize: "22px" }}>
-                {firstName}'s Fit Diary
+                My Fit Diary
               </h3>
 
               {/* Average Drip */}

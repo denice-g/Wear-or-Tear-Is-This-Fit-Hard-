@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox";
 import WhiteBox from "../components/white_box";
+import Left from "../components/Left.jsx";
+import Right from "../components/Right.jsx";
+import { useNavigate } from "react-router-dom"
 
 function Preferences() {
   const [fit, setFit] = useState("");
   const [color, setColor] = useState("");
   const [style, setStyle] = useState("");
   const [zip, setZip] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,21 +132,21 @@ function Preferences() {
 
 
               {/* Zip Code */}
-<div style={{ width: "100%", display: "flex", flexDirection: "column", marginTop: "10px" }}>
-  <label>Zip Code:</label>
-  <input
-    type="text"
-    value={zip}
-    onChange={(e) => setZip(e.target.value)}
-    placeholder="Enter your zip code"
-    style={{
-      width: "50%",       // adjust width as you like
-      padding: "5px",
-      borderRadius: "5px",
-      marginTop: "5px",
-    }}
-  />
-</div>
+          <div style={{ width: "100%", display: "flex", flexDirection: "column", marginTop: "10px" }}>
+            <label>Zip Code:</label>
+            <input
+              type="text"
+              value={zip}
+              onChange={(e) => setZip(e.target.value)}
+              placeholder="Enter your zip code"
+              style={{
+                width: "50%",       // adjust width as you like
+                padding: "5px",
+                borderRadius: "5px",
+                marginTop: "5px",
+              }}
+            />
+          </div>
 
 
               <button
@@ -161,10 +165,23 @@ function Preferences() {
               </button>
             </form>
           </WhiteBox>
-        </div>
-      </BlueBox>
-    </div>
-  );
-}
+          <div
+            style={{
+              width: "90%",
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 15px",
+            }}
+          >
+            <Left to="/Photo" />
+            <div style={{ marginLeft: "auto" }}>
+              <Right to="/Results"/>
+            </div>
+          </div>
+                  </div>
+                </BlueBox>
+              </div>
+            );
+          }
 
 export default Preferences;

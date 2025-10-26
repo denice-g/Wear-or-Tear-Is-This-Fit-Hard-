@@ -8,9 +8,9 @@ const BlueBox = ({ children, width = "600px", height = "600px" }) => {
         height,
         background: "linear-gradient(to bottom right, #B9DFE8, #EDFEFF)", 
         borderRadius: "20px",
-        alignItems: "center",         // added
+        alignItems: "center",         
         justifyContent: "center",
-        flexDirection: "column",      // added
+        flexDirection: "column",     
         boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
         display: "flex",
       }}

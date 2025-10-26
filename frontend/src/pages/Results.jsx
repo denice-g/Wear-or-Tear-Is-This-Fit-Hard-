@@ -2,7 +2,8 @@ import React from "react";
 import background from "../assets/background.png";
 import BlueBox from "../components/big_bluebox";
 import WhiteBox from "../components/white_box";
-import userPhoto from "../assets/work-outfit.jpg"; // ✅ imported correctly
+import userPhoto from "../assets/work-outfit.jpg";
+import Left from "../components/Left.jsx";
 
 function Results() {
   // Placeholder data
@@ -82,6 +83,18 @@ function Results() {
             </div>
           </WhiteBox>
         </div>
+        <div
+  style={{
+    width: "90%",
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: "10px 15px",
+  }}
+>
+  <Left />
+</div>
+
       </BlueBox>
     </div>
   );
