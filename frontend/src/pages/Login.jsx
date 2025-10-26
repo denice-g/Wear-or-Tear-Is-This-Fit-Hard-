@@ -16,7 +16,7 @@ function Login(){
             border: "10px #0077b6"
         }}>
         <BlueBox width="500px" height="600px">
-        <h2>style={{textAlign: "left", marginTop:"10px"}}
+        <h2 style={{textAlign: "left", marginTop:"10px"}}>
             WEAR or TEAR</h2>
       </BlueBox>
     </div>
